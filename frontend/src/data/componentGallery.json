@@ -1,0 +1,130 @@
+[
+  {
+    "name": "arduino",
+    "file": "arduino.png"
+  },
+  {
+    "name": "lcd_16x2",
+    "file": "lcd_16x2.png"
+  },
+  {
+    "name": "breadboard",
+    "file": "breadboard.png"
+  },
+  {
+    "name": "hc_sr04_ultrasonic_sensor",
+    "file": "hc_sr04_ultrasonic_sensor.png"
+  },
+  {
+    "name": "ir_sensor",
+    "file": "ir_sensor.png"
+  },
+  {
+    "name": "temperature_sensor",
+    "file": "temperature_sensor.png"
+  },
+  {
+    "name": "dht11_sensor",
+    "file": "dht11_sensor.png"
+  },
+  {
+    "name": "one_wire_component",
+    "file": "one_wire_component.png"
+  },
+  {
+    "name": "connector",
+    "file": "connector.png"
+  },
+  {
+    "name": "ldr_sensor",
+    "file": "ldr_sensor.png"
+  },
+  {
+    "name": "soil_moisture_sensor",
+    "file": "soil_moisture_sensor.png"
+  },
+  {
+    "name": "potentiometer",
+    "file": "potentiometer.png"
+  },
+  {
+    "name": "push_buttons",
+    "file": "push_buttons.png"
+  },
+  {
+    "name": "buzzer",
+    "file": "buzzer.png"
+  },
+  {
+    "name": "sg90_servo",
+    "file": "sg90_servo.png"
+  },
+  {
+    "name": "relay_module",
+    "file": "relay_module.png"
+  },
+  {
+    "name": "leds_voltage_level_shifter",
+    "file": "leds_voltage_level_shifter.png"
+  },
+  {
+    "name": "resistors",
+    "file": "resistors.png"
+  },
+  {
+    "name": "regulated_power_supply",
+    "file": "regulated_power_supply.png"
+  },
+  {
+    "name": "usb_cable",
+    "file": "usb_cable.png"
+  },
+  {
+    "name": "gsm_module",
+    "file": "gsm_module.png"
+  },
+  {
+    "name": "hc05_bluetooth_module",
+    "file": "hc05_bluetooth_module.png"
+  },
+  {
+    "name": "esp8266_wifi_module",
+    "file": "esp8266_wifi_module.png"
+  },
+  {
+    "name": "gsm_module_sim",
+    "file": "gsm_module_sim.png"
+  },
+  {
+    "name": "lora_module",
+    "file": "lora_module.png"
+  },
+  {
+    "name": "xbee_module",
+    "file": "xbee_module.png"
+  },
+  {
+    "name": "antennas",
+    "file": "antennas.png"
+  },
+  {
+    "name": "sim_card",
+    "file": "sim_card.png"
+  },
+  {
+    "name": "compatible_smartphone",
+    "file": "compatible_smartphone.png"
+  },
+  {
+    "name": "wireless_gateway_receiver",
+    "file": "wireless_gateway_receiver.png"
+  },
+  {
+    "name": "low_voltage_load",
+    "file": "low_voltage_load.png"
+  },
+  {
+    "name": "jumper_wires",
+    "file": "jumper_wires.png"
+  }
+]

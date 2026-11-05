@@ -1,0 +1,2492 @@
+[
+ {
+  "id": 1,
+  "title": "Arduino Uno Board",
+  "category": "Controller",
+  "icon": "🧠",
+  "summary": "The brain of a beginner IoT project.",
+  "youtube": {
+   "tamil": {
+    "channel": "Lost Tech Tamil",
+    "query": "Arduino Uno tutorial Tamil beginner"
+   },
+   "english": {
+    "channel": "Paul McWhorter",
+    "query": "Arduino Uno tutorial for beginners"
+   }
+  },
+  "key_points": [
+   "Uno uses the ATmega328P microcontroller and 5 V logic.",
+   "14 digital pins (6 can do PWM) and 6 analog inputs (A0–A5).",
+   "Programs (sketches) have setup() that runs once and loop() that repeats forever."
+  ],
+  "quiz": [
+   {
+    "question": "Which function runs only once when the Arduino starts?",
+    "answer": "setup()",
+    "options": [
+     "setup()",
+     "loop()",
+     "main()"
+    ]
+   },
+   {
+    "question": "What is the logic voltage of Arduino Uno?",
+    "answer": "5 V",
+    "options": [
+     "5 V",
+     "3.3 V",
+     "12 V"
+    ]
+   },
+   {
+    "question": "How many analog input pins does Uno have?",
+    "answer": "6",
+    "options": [
+     "6",
+     "2",
+     "14"
+    ]
+   },
+   {
+    "question": "Which function repeats again and again?",
+    "answer": "loop()",
+    "options": [
+     "loop()",
+     "setup()",
+     "begin()"
+    ]
+   }
+  ],
+  "notes": {
+   "principle": "A microcontroller combines a processor, memory and input/output pins on one board. Arduino Uno runs a stored program and controls connected components.",
+   "working": "The ATmega328P executes the sketch uploaded through USB. Digital pins read HIGH/LOW signals, analog inputs measure changing voltages, and PWM pins can control output power.",
+   "applications": [
+    "Learning embedded programming",
+    "Reading sensors and controlling LEDs or motors",
+    "Prototyping automation and IoT systems"
+   ],
+   "advantages": [
+    "Beginner-friendly IDE and large learning community",
+    "Many compatible sensors and shields",
+    "USB programming and clear pin labels"
+   ],
+   "disadvantages": [
+    "Limited RAM and program memory",
+    "No built-in Wi-Fi or Bluetooth",
+    "Not suitable for high-performance processing"
+   ],
+   "safety": [
+    "Check the board pinout and voltage before wiring.",
+    "Do not short 5 V to GND or power motors directly from I/O pins."
+   ]
+  }
+ },
+ {
+  "id": 2,
+  "title": "Ultrasonic Sensor (HC-SR04)",
+  "category": "Sensor",
+  "icon": "📡",
+  "summary": "Measure distance using sound waves.",
+  "youtube": {
+   "tamil": {
+    "channel": "Lost Tech Tamil",
+    "query": "HC-SR04 ultrasonic sensor Arduino Tamil"
+   },
+   "english": {
+    "channel": "DroneBot Workshop",
+    "query": "HC-SR04 ultrasonic sensor Arduino tutorial"
+   }
+  },
+  "key_points": [
+   "TRIG starts a measurement; ECHO returns a pulse whose width depends on distance.",
+   "Distance (cm) = duration × 0.034 ÷ 2.",
+   "Working range is roughly 2 cm to 400 cm."
+  ],
+  "quiz": [
+   {
+    "question": "Which HC-SR04 pin starts a measurement?",
+    "answer": "TRIG",
+    "options": [
+     "TRIG",
+     "ECHO",
+     "VCC"
+    ]
+   },
+   {
+    "question": "Why do we divide by 2 in the distance formula?",
+    "answer": "Sound travels to the object and back",
+    "options": [
+     "Sound travels to the object and back",
+     "The sensor is slow",
+     "Because Arduino has 2 cores"
+    ]
+   },
+   {
+    "question": "What does HC-SR04 use to measure distance?",
+    "answer": "Ultrasonic sound",
+    "options": [
+     "Ultrasonic sound",
+     "Light",
+     "Magnetism"
+    ]
+   },
+   {
+    "question": "Approximate range of HC-SR04?",
+    "answer": "2 – 400 cm",
+    "options": [
+     "2 – 400 cm",
+     "1 – 10 km",
+     "0 – 1 cm"
+    ]
+   }
+  ],
+  "notes": {
+   "principle": "HC-SR04 measures distance from the time taken by an ultrasonic sound pulse to travel to an object and return as an echo.",
+   "working": "A short trigger pulse starts an ultrasonic burst. The Echo pin stays HIGH for the round-trip travel time; distance in centimetres is approximately echo time in microseconds divided by 58.",
+   "applications": [
+    "Obstacle detection robots",
+    "Parking distance indicators",
+    "Water-tank level prototypes"
+   ],
+   "advantages": [
+    "Non-contact distance measurement",
+    "Simple digital trigger and echo interface",
+    "Useful over a practical short range"
+   ],
+   "disadvantages": [
+    "Soft or angled surfaces may reflect sound poorly",
+    "Readings can be affected by temperature and nearby objects",
+    "Not ideal for very small or distant targets"
+   ],
+   "safety": [
+    "Use the correct supply voltage and common ground.",
+    "Keep the sensor dry and avoid pointing it at people or animals at close range."
+   ]
+  }
+ },
+ {
+  "id": 3,
+  "title": "IR Sensor",
+  "category": "Sensor",
+  "icon": "👁️",
+  "summary": "Detect objects using infrared light.",
+  "youtube": {
+   "tamil": {
+    "channel": "NexCS Tamil",
+    "query": "IR sensor Arduino Tamil tutorial"
+   },
+   "english": {
+    "channel": "Paul McWhorter",
+    "query": "IR sensor Arduino tutorial for beginners"
+   }
+  },
+  "key_points": [
+   "An IR LED sends infrared light; a photodiode catches the reflection.",
+   "Most obstacle modules give LOW on OUT when an object is detected.",
+   "The small blue potentiometer on the module adjusts sensitivity."
+  ],
+  "quiz": [
+   {
+    "question": "Most IR obstacle modules output what when an object is detected?",
+    "answer": "LOW",
+    "options": [
+     "LOW",
+     "Always HIGH",
+     "Random value"
+    ]
+   },
+   {
+    "question": "An IR sensor works using…",
+    "answer": "Infrared light",
+    "options": [
+     "Infrared light",
+     "Sound waves",
+     "Magnetism"
+    ]
+   },
+   {
+    "question": "A good use of an IR sensor is…",
+    "answer": "Object detection or counting",
+    "options": [
+     "Object detection or counting",
+     "Measuring soil acidity",
+     "Playing music"
+    ]
+   },
+   {
+    "question": "Which pin gives the detection signal?",
+    "answer": "OUT",
+    "options": [
+     "OUT",
+     "GND",
+     "VCC"
+    ]
+   }
+  ],
+  "notes": {
+   "principle": "An infrared sensor detects infrared light emitted or reflected by nearby objects.",
+   "working": "A typical reflective IR module has an IR LED and photodiode/phototransistor. Reflected IR changes the receiver signal; a comparator may convert it into a digital output.",
+   "applications": [
+    "Line-following robots",
+    "Object and edge detection",
+    "Automatic counters and proximity alarms"
+   ],
+   "advantages": [
+    "Low cost and quick response",
+    "Compact and easy to interface",
+    "Works well for short-range detection"
+   ],
+   "disadvantages": [
+    "Performance depends on surface colour and reflectivity",
+    "Sunlight and other IR sources can cause interference",
+    "Usually gives limited distance information"
+   ],
+   "safety": [
+    "Avoid looking directly into high-power IR emitters.",
+    "Adjust sensitivity in the intended lighting conditions."
+   ]
+  }
+ },
+ {
+  "id": 4,
+  "title": "Temperature Sensor",
+  "category": "Sensor",
+  "icon": "🌡️",
+  "summary": "Read temperature from a sensor.",
+  "youtube": {
+   "tamil": {
+    "channel": "NexCS Tamil",
+    "query": "temperature sensor Arduino Tamil"
+   },
+   "english": {
+    "channel": "GreatScott!",
+    "query": "Arduino temperature sensor tutorial"
+   }
+  },
+  "key_points": [
+   "LM35 gives 10 mV for every 1 °C.",
+   "analogRead() returns 0–1023 for 0–5 V.",
+   "Temperature = voltage × 100."
+  ],
+  "quiz": [
+   {
+    "question": "LM35 output voltage per °C is…",
+    "answer": "10 mV",
+    "options": [
+     "10 mV",
+     "1 V",
+     "100 mV"
+    ]
+   },
+   {
+    "question": "Arduino analogRead() range is…",
+    "answer": "0 – 1023",
+    "options": [
+     "0 – 1023",
+     "0 – 255",
+     "0 – 5"
+    ]
+   },
+   {
+    "question": "A reading of 1023 means about…",
+    "answer": "5 V",
+    "options": [
+     "5 V",
+     "3.3 V",
+     "0 V"
+    ]
+   },
+   {
+    "question": "LM35 gives its output as…",
+    "answer": "An analog voltage",
+    "options": [
+     "An analog voltage",
+     "A Bluetooth packet",
+     "A digital pulse train"
+    ]
+   }
+  ],
+  "notes": {
+   "principle": "A temperature sensor converts temperature into an electrical quantity such as voltage, resistance or a digital value.",
+   "working": "The sensor element changes its electrical characteristics with temperature. The controller reads the analog or digital output and converts it using the sensor data sheet.",
+   "applications": [
+    "Room and equipment monitoring",
+    "Over-temperature alerts",
+    "Greenhouse and incubator projects"
+   ],
+   "advantages": [
+    "Enables automatic temperature monitoring",
+    "Many low-cost sensor choices",
+    "Can be combined with fans or alarms"
+   ],
+   "disadvantages": [
+    "Needs calibration for accurate measurements",
+    "Some sensors respond slowly",
+    "Placement and airflow affect readings"
+   ],
+   "safety": [
+    "Observe the sensor operating range.",
+    "Do not expose low-voltage modules to hot surfaces or liquids unless rated for it."
+   ]
+  }
+ },
+ {
+  "id": 5,
+  "title": "Temperature & Humidity Sensor",
+  "category": "Sensor",
+  "icon": "💧",
+  "summary": "Measure air temperature and humidity.",
+  "youtube": {
+   "tamil": {
+    "channel": "NexCS Tamil",
+    "query": "DHT11 DHT22 Arduino Tamil tutorial"
+   },
+   "english": {
+    "channel": "Programming Electronics Academy",
+    "query": "DHT11 temperature humidity Arduino tutorial"
+   }
+  },
+  "key_points": [
+   "DHT11 measures temperature and humidity with one data wire.",
+   "Read it about once every 2 seconds – it is a slow sensor.",
+   "Use isnan() to detect a failed reading."
+  ],
+  "quiz": [
+   {
+    "question": "DHT11 measures…",
+    "answer": "Temperature and humidity",
+    "options": [
+     "Temperature and humidity",
+     "Light and sound",
+     "Distance and speed"
+    ]
+   },
+   {
+    "question": "Which call reads humidity?",
+    "answer": "dht.readHumidity()",
+    "options": [
+     "dht.readHumidity()",
+     "dht.readLight()",
+     "dht.humid()"
+    ]
+   },
+   {
+    "question": "How often should DHT11 be read?",
+    "answer": "About every 2 seconds",
+    "options": [
+     "About every 2 seconds",
+     "1000 times per second",
+     "Only once a day"
+    ]
+   },
+   {
+    "question": "isnan() is used to…",
+    "answer": "Detect a failed sensor reading",
+    "options": [
+     "Detect a failed sensor reading",
+     "Make a sound",
+     "Reset the board"
+    ]
+   }
+  ],
+  "notes": {
+   "principle": "A temperature-humidity sensor measures air temperature and relative humidity using sensing elements and provides calibrated digital data.",
+   "working": "A sensor such as DHT11/DHT22 samples its internal elements and sends a digital data frame to the microcontroller using a one-wire-style timing protocol.",
+   "applications": [
+    "Weather stations",
+    "Greenhouse monitoring",
+    "Classroom comfort and storage monitoring"
+   ],
+   "advantages": [
+    "Two environmental measurements in one module",
+    "Simple digital connection",
+    "Useful for beginner IoT dashboards"
+   ],
+   "disadvantages": [
+    "Sampling speed is limited",
+    "Low-cost models have limited accuracy",
+    "Condensation and incorrect wiring affect readings"
+   ],
+   "safety": [
+    "Keep the sensor within its humidity and temperature ratings.",
+    "Do not immerse a non-waterproof module."
+   ]
+  }
+ },
+ {
+  "id": 6,
+  "title": "LDR / Light Sensor",
+  "category": "Sensor",
+  "icon": "☀️",
+  "summary": "Detect brightness and darkness.",
+  "youtube": {
+   "tamil": {
+    "channel": "NexCS Tamil",
+    "query": "LDR light sensor Arduino Tamil"
+   },
+   "english": {
+    "channel": "Paul McWhorter",
+    "query": "LDR light sensor Arduino tutorial"
+   }
+  },
+  "key_points": [
+   "LDR = Light Dependent Resistor: resistance drops in bright light.",
+   "A module (or voltage divider) turns this into a voltage Arduino can read.",
+   "Use a threshold value to decide “dark” or “bright”."
+  ],
+  "quiz": [
+   {
+    "question": "In bright light the LDR resistance…",
+    "answer": "Decreases",
+    "options": [
+     "Decreases",
+     "Increases",
+     "Stays the same"
+    ]
+   },
+   {
+    "question": "LDR stands for…",
+    "answer": "Light Dependent Resistor",
+    "options": [
+     "Light Dependent Resistor",
+     "Large Digital Relay",
+     "Low Data Rate"
+    ]
+   },
+   {
+    "question": "Why connect an LDR to an analog pin?",
+    "answer": "The value changes smoothly",
+    "options": [
+     "The value changes smoothly",
+     "It only has two states",
+     "It needs 12 V"
+    ]
+   },
+   {
+    "question": "A real-life LDR project is…",
+    "answer": "Automatic street light",
+    "options": [
+     "Automatic street light",
+     "Distance meter",
+     "Music player"
+    ]
+   }
+  ],
+  "notes": {
+   "principle": "An LDR changes resistance according to the amount of light falling on it; brighter light usually means lower resistance.",
+   "working": "The LDR is connected with a fixed resistor as a voltage divider. The controller reads the divider voltage using an analog input and compares it with a threshold.",
+   "applications": [
+    "Automatic street-light models",
+    "Day/night detection",
+    "Display brightness control"
+   ],
+   "advantages": [
+    "Very inexpensive",
+    "Easy analog interface",
+    "Useful for light-responsive demonstrations"
+   ],
+   "disadvantages": [
+    "Slow response compared with photodiodes",
+    "Resistance varies between individual parts",
+    "Readings depend on divider resistor and light spectrum"
+   ],
+   "safety": [
+    "Use a suitable resistor to limit current.",
+    "Do not connect an LDR directly across a supply without considering current."
+   ]
+  }
+ },
+ {
+  "id": 7,
+  "title": "Soil Moisture Sensor",
+  "category": "Sensor",
+  "icon": "🌱",
+  "summary": "Estimate how wet the soil is.",
+  "youtube": {
+   "tamil": {
+    "channel": "NexCS Tamil",
+    "query": "soil moisture sensor Arduino Tamil"
+   },
+   "english": {
+    "channel": "Paul McWhorter",
+    "query": "Arduino soil moisture sensor project"
+   }
+  },
+  "key_points": [
+   "The probe’s electrical behaviour changes with water in the soil.",
+   "On common modules a wetter soil gives a lower analog value – always calibrate dry and wet.",
+   "Do not keep a resistive probe powered all the time – it corrodes."
+  ],
+  "quiz": [
+   {
+    "question": "On a common resistive module, wetter soil gives…",
+    "answer": "A lower analog reading",
+    "options": [
+     "A lower analog reading",
+     "A higher analog reading",
+     "No change"
+    ]
+   },
+   {
+    "question": "Why do we calibrate the soil sensor?",
+    "answer": "Different sensors and soils give different values",
+    "options": [
+     "Different sensors and soils give different values",
+     "To make it hot",
+     "To add sound"
+    ]
+   },
+   {
+    "question": "Which Arduino pin type reads AO?",
+    "answer": "Analog input (A0)",
+    "options": [
+     "Analog input (A0)",
+     "TX",
+     "3.3 V"
+    ]
+   },
+   {
+    "question": "A smart-farm use is…",
+    "answer": "Plant watering alert",
+    "options": [
+     "Plant watering alert",
+     "Measuring sound",
+     "Counting cars"
+    ]
+   }
+  ],
+  "notes": {
+   "principle": "A soil-moisture probe estimates water content by measuring a change in electrical resistance or capacitance in the soil.",
+   "working": "The probe output changes as soil moisture changes. A controller reads the analog/digital signal and uses calibrated thresholds to indicate dry, suitable or wet soil.",
+   "applications": [
+    "Smart irrigation prototypes",
+    "Plant-care reminders",
+    "Agriculture monitoring demonstrations"
+   ],
+   "advantages": [
+    "Helps avoid unnecessary watering",
+    "Low-cost automation input",
+    "Can be integrated with pumps and alerts"
+   ],
+   "disadvantages": [
+    "Resistive probes can corrode",
+    "Different soils need different calibration",
+    "Sensor placement affects readings"
+   ],
+   "safety": [
+    "Use a corrosion-resistant capacitive sensor where possible.",
+    "Keep exposed electronics and connectors away from water."
+   ]
+  }
+ },
+ {
+  "id": 8,
+  "title": "16×2 LCD Display",
+  "category": "Display",
+  "icon": "🖥️",
+  "summary": "Show sensor readings as text.",
+  "youtube": {
+   "tamil": {
+    "channel": "Lost Tech Tamil",
+    "query": "16x2 LCD Arduino Tamil tutorial"
+   },
+   "english": {
+    "channel": "Paul McWhorter",
+    "query": "Arduino 16x2 LCD tutorial"
+   }
+  },
+  "key_points": [
+   "16 columns × 2 rows = 32 characters.",
+   "An I2C backpack needs only 4 wires: GND, VCC, SDA (A4), SCL (A5).",
+   "Common I2C addresses are 0x27 and 0x3F."
+  ],
+  "quiz": [
+   {
+    "question": "How many characters fit on a 16×2 LCD?",
+    "answer": "32",
+    "options": [
+     "32",
+     "16",
+     "64"
+    ]
+   },
+   {
+    "question": "I2C pins on Arduino Uno are…",
+    "answer": "A4 (SDA) and A5 (SCL)",
+    "options": [
+     "A4 (SDA) and A5 (SCL)",
+     "D2 and D3",
+     "D9 and D10"
+    ]
+   },
+   {
+    "question": "A common I2C LCD address is…",
+    "answer": "0x27",
+    "options": [
+     "0x27",
+     "0x99",
+     "0x01"
+    ]
+   },
+   {
+    "question": "lcd.setCursor(0, 1) moves to…",
+    "answer": "Second line, first column",
+    "options": [
+     "Second line, first column",
+     "First line, second column",
+     "The next page"
+    ]
+   }
+  ],
+  "notes": {
+   "principle": "An LCD creates visible characters by controlling liquid-crystal pixels; a 16×2 module displays two rows of 16 characters.",
+   "working": "The microcontroller sends commands and character data through parallel pins or an I²C backpack. A contrast potentiometer adjusts visibility.",
+   "applications": [
+    "Showing sensor readings",
+    "Menu and status displays",
+    "Timers and measurement instruments"
+   ],
+   "advantages": [
+    "Readable text without a computer",
+    "Low power compared with many displays",
+    "Widely supported libraries"
+   ],
+   "disadvantages": [
+    "Limited character display and graphics",
+    "Needs several connections without I²C",
+    "Viewing angle and contrast matter"
+   ],
+   "safety": [
+    "Check module voltage and pin order before connecting.",
+    "Use a current-limiting backlight arrangement if required by the module."
+   ]
+  }
+ },
+ {
+  "id": 9,
+  "title": "10 kΩ Potentiometer",
+  "category": "Input",
+  "icon": "🎚️",
+  "summary": "Adjust a value by turning a knob.",
+  "youtube": {
+   "tamil": {
+    "channel": "NexCS Tamil",
+    "query": "potentiometer Arduino Tamil"
+   },
+   "english": {
+    "channel": "Paul McWhorter",
+    "query": "Arduino potentiometer analog input tutorial"
+   }
+  },
+  "key_points": [
+   "Outer pins go to 5 V and GND; the middle (wiper) goes to an analog pin.",
+   "analogRead gives 0–1023 as you turn the knob.",
+   "map() converts one range to another, e.g. 0–1023 to 0–255."
+  ],
+  "quiz": [
+   {
+    "question": "The potentiometer wiper pin connects to…",
+    "answer": "An analog input",
+    "options": [
+     "An analog input",
+     "5 V",
+     "USB"
+    ]
+   },
+   {
+    "question": "analogRead() returns…",
+    "answer": "0 to 1023",
+    "options": [
+     "0 to 1023",
+     "0 to 255",
+     "0 to 5"
+    ]
+   },
+   {
+    "question": "map(512, 0, 1023, 0, 255) gives about…",
+    "answer": "127",
+    "options": [
+     "127",
+     "255",
+     "1023"
+    ]
+   },
+   {
+    "question": "A potentiometer is a…",
+    "answer": "Variable resistor",
+    "options": [
+     "Variable resistor",
+     "Light source",
+     "Memory chip"
+    ]
+   }
+  ],
+  "notes": {
+   "principle": "A potentiometer is a three-terminal variable resistor; its wiper provides an adjustable fraction of the supply voltage.",
+   "working": "Connect the two outer terminals to supply and ground and the middle wiper to an analog input. Turning the shaft changes the voltage read by the controller.",
+   "applications": [
+    "Adjusting speed or brightness",
+    "Setting thresholds",
+    "User input knobs and calibration"
+   ],
+   "advantages": [
+    "Simple human control input",
+    "Smooth adjustable voltage",
+    "Reusable and inexpensive"
+   ],
+   "disadvantages": [
+    "Mechanical wear over time",
+    "Can produce noisy readings",
+    "Needs analog input and suitable wiring"
+   ],
+   "safety": [
+    "Use it only within its voltage and power rating.",
+    "Avoid forcing the shaft beyond its mechanical travel."
+   ]
+  }
+ },
+ {
+  "id": 10,
+  "title": "Push Buttons",
+  "category": "Input",
+  "icon": "🔘",
+  "summary": "Give a manual input to a circuit.",
+  "youtube": {
+   "tamil": {
+    "channel": "NexCS Tamil",
+    "query": "push button Arduino Tamil tutorial"
+   },
+   "english": {
+    "channel": "Paul McWhorter",
+    "query": "Arduino push button tutorial"
+   }
+  },
+  "key_points": [
+   "A pull-down (or pull-up) resistor keeps the input from floating.",
+   "INPUT_PULLUP uses the Arduino’s internal resistor – pressed reads LOW.",
+   "Contacts bounce, so wait 20–50 ms (debounce)."
+  ],
+  "quiz": [
+   {
+    "question": "Why use a pull-down resistor?",
+    "answer": "To avoid a floating input",
+    "options": [
+     "To avoid a floating input",
+     "To increase voltage",
+     "To make code faster"
+    ]
+   },
+   {
+    "question": "Button bounce means…",
+    "answer": "Rapid false on/off signals when pressed",
+    "options": [
+     "Rapid false on/off signals when pressed",
+     "The LED glows",
+     "The button makes sound"
+    ]
+   },
+   {
+    "question": "With INPUT_PULLUP an idle button reads…",
+    "answer": "HIGH",
+    "options": [
+     "HIGH",
+     "LOW",
+     "Random"
+    ]
+   },
+   {
+    "question": "Which function reads a button?",
+    "answer": "digitalRead()",
+    "options": [
+     "digitalRead()",
+     "analogWrite()",
+     "tone()"
+    ]
+   }
+  ],
+  "notes": {
+   "principle": "A push button is a momentary mechanical switch that opens or closes an electrical path when pressed.",
+   "working": "The input pin is held at a known logic level using a pull-up or pull-down resistor. Pressing the button changes the pin state; software debounce filters contact bounce.",
+   "applications": [
+    "Start/stop controls",
+    "Menu navigation",
+    "Manual reset and user interaction"
+   ],
+   "advantages": [
+    "Simple and inexpensive",
+    "Clear physical user input",
+    "Easy to test with digital pins"
+   ],
+   "disadvantages": [
+    "Contact bounce needs handling",
+    "Mechanical parts can wear",
+    "Requires stable pull-up/pull-down wiring"
+   ],
+   "safety": [
+    "Use a pull-up or pull-down so the input does not float.",
+    "Disconnect power before changing circuit wiring."
+   ]
+  }
+ },
+ {
+  "id": 11,
+  "title": "Buzzer",
+  "category": "Output",
+  "icon": "🔔",
+  "summary": "Create beeps and simple alerts.",
+  "youtube": {
+   "tamil": {
+    "channel": "Lost Tech Tamil",
+    "query": "buzzer Arduino Tamil tutorial"
+   },
+   "english": {
+    "channel": "Paul McWhorter",
+    "query": "Arduino buzzer tutorial"
+   }
+  },
+  "key_points": [
+   "An active buzzer beeps when given power; a passive one needs a frequency from tone().",
+   "tone(pin, 2000) makes a 2000 Hz sound; noTone(pin) stops it.",
+   "Buzzer + goes to the signal pin, − goes to GND."
+  ],
+  "quiz": [
+   {
+    "question": "An active buzzer needs…",
+    "answer": "Only HIGH / LOW",
+    "options": [
+     "Only HIGH / LOW",
+     "A frequency",
+     "Wi-Fi"
+    ]
+   },
+   {
+    "question": "tone(8, 2000) does what?",
+    "answer": "Plays a 2000 Hz sound on pin 8",
+    "options": [
+     "Plays a 2000 Hz sound on pin 8",
+     "Waits 2000 seconds",
+     "Sets pin 2000"
+    ]
+   },
+   {
+    "question": "Which function stops the tone?",
+    "answer": "noTone()",
+    "options": [
+     "noTone()",
+     "stopBuzz()",
+     "delay()"
+    ]
+   },
+   {
+    "question": "The buzzer positive (+) pin connects to…",
+    "answer": "An Arduino output pin",
+    "options": [
+     "An Arduino output pin",
+     "Nothing",
+     "The USB shell"
+    ]
+   }
+  ],
+  "notes": {
+   "principle": "A buzzer converts electrical energy into sound, often using a piezoelectric element or an oscillator circuit.",
+   "working": "An active buzzer sounds when powered; a passive piezo buzzer needs a changing signal such as tone/PWM to create a pitch.",
+   "applications": [
+    "Warning alarms",
+    "Timers and feedback signals",
+    "Door and sensor alerts"
+   ],
+   "advantages": [
+    "Simple audible feedback",
+    "Small and low cost",
+    "Can indicate different states with patterns"
+   ],
+   "disadvantages": [
+    "Limited sound quality",
+    "Can be irritating if too loud",
+    "Some buzzers draw more current than a pin can provide"
+   ],
+   "safety": [
+    "Use a transistor driver if current exceeds the pin rating.",
+    "Keep sound levels comfortable."
+   ]
+  }
+ },
+ {
+  "id": 12,
+  "title": "Red, Yellow & Green LEDs",
+  "category": "Output",
+  "icon": "🚦",
+  "summary": "Display status using coloured lights.",
+  "youtube": {
+   "tamil": {
+    "channel": "Lost Tech Tamil",
+    "query": "LED Arduino Tamil beginner"
+   },
+   "english": {
+    "channel": "Paul McWhorter",
+    "query": "Arduino LED traffic light tutorial"
+   }
+  },
+  "key_points": [
+   "An LED has polarity: long leg is the anode (+).",
+   "Always add a 220 Ω resistor to limit current.",
+   "Traffic order: Red → Green → Yellow → Red."
+  ],
+  "quiz": [
+   {
+    "question": "The longer LED leg is the…",
+    "answer": "Anode (+)",
+    "options": [
+     "Anode (+)",
+     "Cathode (−)",
+     "Ground"
+    ]
+   },
+   {
+    "question": "An LED without a resistor may…",
+    "answer": "Burn out",
+    "options": [
+     "Burn out",
+     "Get safely brighter",
+     "Play sound"
+    ]
+   },
+   {
+    "question": "To turn an LED on you write…",
+    "answer": "digitalWrite(pin, HIGH)",
+    "options": [
+     "digitalWrite(pin, HIGH)",
+     "digitalRead(pin)",
+     "delay(pin)"
+    ]
+   },
+   {
+    "question": "Which colour means STOP in a traffic light?",
+    "answer": "Red",
+    "options": [
+     "Red",
+     "Green",
+     "Yellow"
+    ]
+   }
+  ],
+  "notes": {
+   "principle": "An LED emits light when forward current flows through its semiconductor junction.",
+   "working": "The LED is connected with a series resistor. Current direction determines whether it lights; different colours can indicate system states.",
+   "applications": [
+    "Status indicators",
+    "Traffic-light learning models",
+    "Visual alerts and displays"
+   ],
+   "advantages": [
+    "Low power and long life",
+    "Fast switching",
+    "Available in many colours"
+   ],
+   "disadvantages": [
+    "Needs correct polarity",
+    "Requires current limiting",
+    "Brightness varies with current and viewing angle"
+   ],
+   "safety": [
+    "Always use a suitable series resistor.",
+    "Check polarity and maximum current before powering."
+   ]
+  }
+ },
+ {
+  "id": 13,
+  "title": "220 Ω Resistors",
+  "category": "Circuit basics",
+  "icon": "〰️",
+  "summary": "Limit current to protect components.",
+  "youtube": {
+   "tamil": {
+    "channel": "Sathish Deva",
+    "query": "resistor basics electronics Tamil"
+   },
+   "english": {
+    "channel": "GreatScott!",
+    "query": "resistor basics current limiting LED"
+   }
+  },
+  "key_points": [
+   "Resistance is measured in ohms (Ω).",
+   "Ohm’s law: V = I × R.",
+   "A 220 Ω resistor keeps LED current at a safe level."
+  ],
+  "quiz": [
+   {
+    "question": "Ohm’s law is…",
+    "answer": "V = I × R",
+    "options": [
+     "V = I × R",
+     "V = I + R",
+     "V = R ÷ I"
+    ]
+   },
+   {
+    "question": "The unit of resistance is…",
+    "answer": "Ohm",
+    "options": [
+     "Ohm",
+     "Volt",
+     "Watt"
+    ]
+   },
+   {
+    "question": "Why put a resistor with an LED?",
+    "answer": "To limit current",
+    "options": [
+     "To limit current",
+     "To increase voltage",
+     "To store data"
+    ]
+   },
+   {
+    "question": "5 V across 220 Ω gives about…",
+    "answer": "23 mA",
+    "options": [
+     "23 mA",
+     "2 A",
+     "220 A"
+    ]
+   }
+  ],
+  "notes": {
+   "principle": "A resistor opposes electric current. A series resistor limits current through an LED and protects it.",
+   "working": "Ohm’s law relates voltage, current and resistance: V = I × R. Choose resistance from the supply voltage, LED forward voltage and desired current.",
+   "applications": [
+    "LED current limiting",
+    "Voltage dividers",
+    "Pull-up and pull-down circuits"
+   ],
+   "advantages": [
+    "Simple passive component",
+    "Reliable and inexpensive",
+    "Useful for controlling current and voltage"
+   ],
+   "disadvantages": [
+    "Dissipates energy as heat",
+    "Fixed resistor values are not adjustable",
+    "Tolerance affects exact values"
+   ],
+   "safety": [
+    "Choose adequate power rating.",
+    "Do not touch a resistor that has become hot."
+   ]
+  }
+ },
+ {
+  "id": 14,
+  "title": "SG90 Servo Motor",
+  "category": "Actuator",
+  "icon": "⚙️",
+  "summary": "Move an arm to a chosen angle.",
+  "youtube": {
+   "tamil": {
+    "channel": "Sathish Deva",
+    "query": "SG90 servo Arduino Tamil"
+   },
+   "english": {
+    "channel": "Paul McWhorter",
+    "query": "Arduino SG90 servo motor tutorial"
+   }
+  },
+  "key_points": [
+   "Wires: brown = GND, red = 5 V, orange = signal.",
+   "The Servo library turns a PWM signal into an angle from 0° to 180°.",
+   "Use an external supply when you drive several servos."
+  ],
+  "quiz": [
+   {
+    "question": "Which library controls a servo?",
+    "answer": "Servo.h",
+    "options": [
+     "Servo.h",
+     "Motor.h",
+     "Wire.h"
+    ]
+   },
+   {
+    "question": "The orange servo wire is…",
+    "answer": "Signal",
+    "options": [
+     "Signal",
+     "GND",
+     "5 V"
+    ]
+   },
+   {
+    "question": "myServo.write(90) moves the arm to…",
+    "answer": "90 degrees",
+    "options": [
+     "90 degrees",
+     "90 seconds",
+     "Off"
+    ]
+   },
+   {
+    "question": "SG90 moves roughly…",
+    "answer": "0 – 180°",
+    "options": [
+     "0 – 180°",
+     "0 – 1000°",
+     "0 – 5°"
+    ]
+   }
+  ],
+  "notes": {
+   "principle": "A servo motor uses feedback control to move its output shaft to a commanded position.",
+   "working": "A control pulse train communicates a target angle. The internal controller drives a small motor until the feedback position matches the command.",
+   "applications": [
+    "Robot arms",
+    "Pan-and-tilt camera models",
+    "Automatic gates and pointer mechanisms"
+   ],
+   "advantages": [
+    "Simple position control",
+    "Compact and beginner friendly",
+    "Can hold a commanded angle"
+   ],
+   "disadvantages": [
+    "Limited rotation and torque for small models",
+    "Can draw high startup/stall current",
+    "Plastic gears may wear"
+   ],
+   "safety": [
+    "Use a suitable external supply for multiple servos and share ground.",
+    "Keep fingers clear of moving linkages."
+   ]
+  }
+ },
+ {
+  "id": 15,
+  "title": "Relay Module",
+  "category": "Actuator",
+  "icon": "🔌",
+  "summary": "Control a separate circuit with a switch.",
+  "youtube": {
+   "tamil": {
+    "channel": "Lost Tech Tamil",
+    "query": "relay module Arduino Tamil"
+   },
+   "english": {
+    "channel": "DroneBot Workshop",
+    "query": "Arduino relay module tutorial safety"
+   }
+  },
+  "key_points": [
+   "A relay is an electrically isolated switch with COM, NO and NC contacts.",
+   "Many relay modules switch ON when the input is LOW (active-low).",
+   "In school demos use only a low-voltage DC load – never mains."
+  ],
+  "quiz": [
+   {
+    "question": "NO on a relay means…",
+    "answer": "Normally Open",
+    "options": [
+     "Normally Open",
+     "Not On",
+     "New Output"
+    ]
+   },
+   {
+    "question": "A safe relay demo load for students is…",
+    "answer": "A low-voltage DC lamp",
+    "options": [
+     "A low-voltage DC lamp",
+     "A mains heater",
+     "A wall socket fan"
+    ]
+   },
+   {
+    "question": "Why use a relay?",
+    "answer": "A small signal controls another circuit",
+    "options": [
+     "A small signal controls another circuit",
+     "To make LEDs brighter",
+     "To store power"
+    ]
+   },
+   {
+    "question": "Many relay modules turn ON when the input is…",
+    "answer": "LOW (active-low)",
+    "options": [
+     "LOW (active-low)",
+     "Always HIGH",
+     "Analog"
+    ]
+   }
+  ],
+  "notes": {
+   "principle": "A relay is an electrically operated switch that lets a low-voltage control signal switch a separate circuit.",
+   "working": "Current in the relay coil creates a magnetic field that moves contacts between normally-open and normally-closed positions. A driver transistor and flyback protection are commonly used.",
+   "applications": [
+    "Switching low-voltage lamps or fans",
+    "Isolation demonstrations",
+    "Automation control panels"
+   ],
+   "advantages": [
+    "Can switch a separate load circuit",
+    "Provides physical contact isolation",
+    "Easy to understand as a switch"
+   ],
+   "disadvantages": [
+    "Mechanical contacts wear and click",
+    "Coil consumes power",
+    "Slower and larger than semiconductor switches"
+   ],
+   "safety": [
+    "For student projects use low-voltage DC loads only.",
+    "Never wire mains electricity on a student breadboard; use supervised certified equipment."
+   ]
+  }
+ },
+ {
+  "id": 16,
+  "title": "Bluetooth (HC-05 / HC-06)",
+  "category": "Wireless",
+  "icon": "ᛒ",
+  "summary": "Send data between Arduino and a phone.",
+  "youtube": {
+   "tamil": {
+    "channel": "Lost Tech Tamil",
+    "query": "HC05 Bluetooth Arduino Tamil"
+   },
+   "english": {
+    "channel": "DroneBot Workshop",
+    "query": "HC-05 Arduino Bluetooth tutorial"
+   }
+  },
+  "key_points": [
+   "HC-05/HC-06 talk to Arduino over serial (TX/RX).",
+   "Pair the phone first (PIN is commonly 1234 or 0000).",
+   "The module RX pin expects 3.3 V – use a voltage divider from Arduino TX."
+  ],
+  "quiz": [
+   {
+    "question": "HC-05 talks to Arduino using…",
+    "answer": "Serial (UART)",
+    "options": [
+     "Serial (UART)",
+     "Ethernet",
+     "HDMI"
+    ]
+   },
+   {
+    "question": "A common default pairing PIN is…",
+    "answer": "1234 or 0000",
+    "options": [
+     "1234 or 0000",
+     "9876543",
+     "None ever"
+    ]
+   },
+   {
+    "question": "Arduino TX to HC-05 RX should use…",
+    "answer": "A voltage divider",
+    "options": [
+     "A voltage divider",
+     "Nothing",
+     "12 V"
+    ]
+   },
+   {
+    "question": "Typical Bluetooth range is about…",
+    "answer": "10 metres",
+    "options": [
+     "10 metres",
+     "100 km",
+     "1 cm"
+    ]
+   }
+  ],
+  "notes": {
+   "principle": "Bluetooth is a short-range wireless communication technology that exchanges data between paired devices.",
+   "working": "HC-05/HC-06 modules provide a serial interface. Data sent from the phone is received on the module and passed to the microcontroller UART.",
+   "applications": [
+    "Phone-controlled robots",
+    "Wireless sensor monitoring",
+    "Remote LED and servo demos"
+   ],
+   "advantages": [
+    "No internet connection needed for local links",
+    "Easy phone interaction",
+    "Low-cost serial modules"
+   ],
+   "disadvantages": [
+    "Shorter range than many wide-area technologies",
+    "Pairing and compatibility can vary",
+    "HC-05 logic levels require care"
+   ],
+   "safety": [
+    "Use a voltage divider or level shifter for a 5 V TX signal into a 3.3 V RX pin.",
+    "Pair only with trusted devices."
+   ]
+  }
+ },
+ {
+  "id": 17,
+  "title": "GSM Module",
+  "category": "Wireless",
+  "icon": "📶",
+  "summary": "Connect projects to cellular networks.",
+  "youtube": {
+   "tamil": {
+    "channel": "Lost Tech Tamil",
+    "query": "SIM800 GSM Arduino Tamil"
+   },
+   "english": {
+    "channel": "DroneBot Workshop",
+    "query": "Arduino GSM SIM800 tutorial"
+   }
+  },
+  "key_points": [
+   "SIM800/SIM900 modules send SMS and calls using AT commands.",
+   "Check that your SIM works with a 2G network.",
+   "GSM modules draw high current peaks – use a good power supply."
+  ],
+  "quiz": [
+   {
+    "question": "GSM modules are controlled using…",
+    "answer": "AT commands",
+    "options": [
+     "AT commands",
+     "HTML tags",
+     "SQL queries"
+    ]
+   },
+   {
+    "question": "A GSM module needs…",
+    "answer": "A valid SIM and network signal",
+    "options": [
+     "A valid SIM and network signal",
+     "Bluetooth",
+     "A monitor"
+    ]
+   },
+   {
+    "question": "A power concern for GSM modules is…",
+    "answer": "High current peaks",
+    "options": [
+     "High current peaks",
+     "None",
+     "230 V input"
+    ]
+   },
+   {
+    "question": "A GSM project can…",
+    "answer": "Send SMS alerts",
+    "options": [
+     "Send SMS alerts",
+     "Show 4K video",
+     "Measure distance only"
+    ]
+   }
+  ],
+  "notes": {
+   "principle": "A GSM module connects to a cellular network and exchanges messages or data through a SIM and mobile subscription.",
+   "working": "The controller sends AT commands over serial. The modem registers on a supported network and can send SMS or make calls depending on the module and service.",
+   "applications": [
+    "Remote alarm notifications",
+    "Asset tracking prototypes",
+    "Basic telemetry where cellular coverage exists"
+   ],
+   "advantages": [
+    "Can communicate over large geographic areas",
+    "SMS alerts work without local Wi-Fi",
+    "Useful for remote monitoring"
+   ],
+   "disadvantages": [
+    "Needs network coverage and a SIM plan",
+    "Network generations and bands may be unsupported",
+    "Power supply must handle current peaks"
+   ],
+   "safety": [
+    "Check local network compatibility and module power requirements.",
+    "Do not share SIM details or personal phone numbers in public project pages."
+   ]
+  }
+ },
+ {
+  "id": 18,
+  "title": "SIM Card",
+  "category": "Connectivity",
+  "icon": "💳",
+  "summary": "Identify a subscriber on a cellular network.",
+  "youtube": {
+   "tamil": {
+    "channel": "Lost Tech Tamil",
+    "query": "GSM module SIM card Arduino Tamil"
+   },
+   "english": {
+    "channel": "DroneBot Workshop",
+    "query": "GSM module SIM card basics IoT"
+   }
+  },
+  "key_points": [
+   "SIM = Subscriber Identity Module.",
+   "It identifies the subscriber on the cellular network.",
+   "Check size (micro/nano), network support and PIN lock before use."
+  ],
+  "quiz": [
+   {
+    "question": "SIM stands for…",
+    "answer": "Subscriber Identity Module",
+    "options": [
+     "Subscriber Identity Module",
+     "Signal Input Memory",
+     "Smart Internet Mobile"
+    ]
+   },
+   {
+    "question": "A SIM identifies the…",
+    "answer": "Subscriber on the network",
+    "options": [
+     "Subscriber on the network",
+     "Arduino bootloader",
+     "Room temperature"
+    ]
+   },
+   {
+    "question": "Why does a SIM have a PIN?",
+    "answer": "To protect it from misuse",
+    "options": [
+     "To protect it from misuse",
+     "To charge the battery",
+     "To increase speed"
+    ]
+   },
+   {
+    "question": "Before using a SIM in a GSM module, check…",
+    "answer": "Size, network support and PIN lock",
+    "options": [
+     "Size, network support and PIN lock",
+     "Its colour",
+     "Its weight"
+    ]
+   }
+  ],
+  "notes": {
+   "principle": "A SIM securely identifies a subscriber to a mobile network and stores authentication information.",
+   "working": "The modem reads the SIM and uses network authentication to register with the mobile operator. A valid plan and supported network are required.",
+   "applications": [
+    "Cellular IoT connectivity",
+    "SMS alert systems",
+    "Mobile network testing"
+   ],
+   "advantages": [
+    "Standard subscriber identity method",
+    "Portable between compatible devices",
+    "Enables operator network access"
+   ],
+   "disadvantages": [
+    "Requires a valid subscription",
+    "SIM size and network support must match",
+    "PIN locks can prevent automatic startup"
+   ],
+   "safety": [
+    "Keep SIM PIN/PUK and account information private.",
+    "Use a suitable SIM adapter; do not force it into the holder."
+   ]
+  }
+ },
+ {
+  "id": 19,
+  "title": "LoRa / LoRaWAN Module",
+  "category": "Wireless",
+  "icon": "🛰️",
+  "summary": "Send small data over long distances.",
+  "youtube": {
+   "tamil": {
+    "channel": "Lost Tech Tamil",
+    "query": "LoRa LoRaWAN IoT Tamil"
+   },
+   "english": {
+    "channel": "DroneBot Workshop",
+    "query": "LoRa LoRaWAN Arduino beginner tutorial"
+   }
+  },
+  "key_points": [
+   "LoRa gives long range with low power but small data rates.",
+   "LoRaWAN is the network protocol built on LoRa.",
+   "Frequency depends on region (India uses 865–867 MHz) – always attach the antenna first."
+  ],
+  "quiz": [
+   {
+    "question": "LoRa’s main strength is…",
+    "answer": "Long range at low power",
+    "options": [
+     "Long range at low power",
+     "HD video streaming",
+     "Fast file downloads"
+    ]
+   },
+   {
+    "question": "LoRaWAN is…",
+    "answer": "A network protocol using LoRa",
+    "options": [
+     "A network protocol using LoRa",
+     "A sensor",
+     "A battery"
+    ]
+   },
+   {
+    "question": "LoRa suits…",
+    "answer": "Small sensor packets",
+    "options": [
+     "Small sensor packets",
+     "4K movies",
+     "Online games"
+    ]
+   },
+   {
+    "question": "Before powering a LoRa module you should…",
+    "answer": "Attach the antenna",
+    "options": [
+     "Attach the antenna",
+     "Remove the antenna",
+     "Bend the antenna"
+    ]
+   }
+  ],
+  "notes": {
+   "principle": "LoRa is a long-range, low-power radio modulation technique; LoRaWAN defines a network protocol for connecting LoRa devices.",
+   "working": "End devices transmit small packets to gateways. Gateways forward packets to a network server, which manages devices and application data.",
+   "applications": [
+    "Agriculture sensor networks",
+    "Remote environmental monitoring",
+    "Long-range low-data-rate telemetry"
+   ],
+   "advantages": [
+    "Long range with low energy use",
+    "Good for small sensor messages",
+    "Can support many distributed nodes"
+   ],
+   "disadvantages": [
+    "Low data rate, not for video",
+    "Coverage depends on terrain and antenna placement",
+    "Regional frequency rules apply"
+   ],
+   "safety": [
+    "Use the correct regional frequency plan and legal transmit power.",
+    "Attach the correct antenna before transmitting."
+   ]
+  }
+ },
+ {
+  "id": 20,
+  "title": "XBee Module",
+  "category": "Wireless",
+  "icon": "📡",
+  "summary": "Build low-power wireless sensor networks.",
+  "youtube": {
+   "tamil": {
+    "channel": "Lost Tech Tamil",
+    "query": "XBee module Arduino Tamil"
+   },
+   "english": {
+    "channel": "DroneBot Workshop",
+    "query": "XBee wireless module tutorial"
+   }
+  },
+  "key_points": [
+   "XBee modules make low-power wireless (ZigBee / 802.15.4) networks.",
+   "Configure them with Digi’s XCTU software.",
+   "Modules in one network share the same PAN ID; logic is 3.3 V."
+  ],
+  "quiz": [
+   {
+    "question": "XBee is used for…",
+    "answer": "Low-power wireless networks",
+    "options": [
+     "Low-power wireless networks",
+     "Wired only",
+     "Satellite TV"
+    ]
+   },
+   {
+    "question": "Tool used to configure XBee…",
+    "answer": "XCTU",
+    "options": [
+     "XCTU",
+     "Photoshop",
+     "Excel"
+    ]
+   },
+   {
+    "question": "XBee modules in a network share a…",
+    "answer": "PAN ID",
+    "options": [
+     "PAN ID",
+     "Wallpaper",
+     "SIM"
+    ]
+   },
+   {
+    "question": "XBee logic voltage is…",
+    "answer": "3.3 V",
+    "options": [
+     "3.3 V",
+     "12 V",
+     "24 V"
+    ]
+   }
+  ],
+  "notes": {
+   "principle": "XBee modules provide low-power wireless communication, commonly using IEEE 802.15.4 or Zigbee-compatible networking.",
+   "working": "Modules are configured with network identifiers and addressing. One module sends packets that another configured module receives.",
+   "applications": [
+    "Wireless sensor networks",
+    "Building automation models",
+    "Remote monitoring nodes"
+   ],
+   "advantages": [
+    "Low-power networking options",
+    "Modular serial integration",
+    "Useful for multi-node demonstrations"
+   ],
+   "disadvantages": [
+    "Configuration can be complex",
+    "Different XBee families may not interoperate",
+    "Modules add hardware cost"
+   ],
+   "safety": [
+    "Check module voltage and antenna requirements.",
+    "Keep network keys and configuration details private."
+   ]
+  }
+ },
+ {
+  "id": 21,
+  "title": "Wi-Fi Module (ESP8266)",
+  "category": "Wireless",
+  "icon": "🌐",
+  "summary": "Connect a device to Wi-Fi and IoT services.",
+  "youtube": {
+   "tamil": {
+    "channel": "Lost Tech Tamil",
+    "query": "ESP8266 Arduino Tamil tutorial"
+   },
+   "english": {
+    "channel": "DroneBot Workshop",
+    "query": "ESP8266 WiFi Arduino beginner tutorial"
+   }
+  },
+  "key_points": [
+   "ESP8266 joins 2.4 GHz Wi-Fi networks.",
+   "It needs the network name (SSID) and password.",
+   "Its pins are 3.3 V – do not feed 5 V directly."
+  ],
+  "quiz": [
+   {
+    "question": "ESP8266 Wi-Fi band is…",
+    "answer": "2.4 GHz",
+    "options": [
+     "2.4 GHz",
+     "60 GHz",
+     "900 MHz only"
+    ]
+   },
+   {
+    "question": "To join a network it needs…",
+    "answer": "SSID and password",
+    "options": [
+     "SSID and password",
+     "A SIM card",
+     "An HDMI cable"
+    ]
+   },
+   {
+    "question": "ESP8266 logic level is…",
+    "answer": "3.3 V",
+    "options": [
+     "3.3 V",
+     "Strictly 5 V",
+     "24 V"
+    ]
+   },
+   {
+    "question": "ESP8266 is mainly used for…",
+    "answer": "Wi-Fi IoT projects",
+    "options": [
+     "Wi-Fi IoT projects",
+     "Measuring resistance",
+     "Moving servos only"
+    ]
+   }
+  ],
+  "notes": {
+   "principle": "ESP8266 is a microcontroller/Wi-Fi system-on-chip that connects embedded devices to 2.4 GHz Wi-Fi networks.",
+   "working": "The device joins a Wi-Fi access point using its SSID and password. Firmware can host a web page or send sensor data to an IoT service.",
+   "applications": [
+    "Wi-Fi sensor dashboards",
+    "Smart home prototypes",
+    "Web-controlled devices"
+   ],
+   "advantages": [
+    "Wi-Fi built in",
+    "Small and affordable",
+    "Large community and libraries"
+   ],
+   "disadvantages": [
+    "3.3 V logic needs careful interfacing",
+    "Limited pins and memory compared with larger boards",
+    "Depends on Wi-Fi coverage and credentials"
+   ],
+   "safety": [
+    "Never apply 5 V directly to 3.3 V GPIO pins.",
+    "Do not hard-code or publish real Wi-Fi passwords."
+   ]
+  }
+ },
+ {
+  "id": 22,
+  "title": "Wireless Receiver / Gateway",
+  "category": "Connectivity",
+  "icon": "🛜",
+  "summary": "Collect data from wireless devices.",
+  "youtube": {
+   "tamil": {
+    "channel": "Lost Tech Tamil",
+    "query": "IoT gateway explained Tamil"
+   },
+   "english": {
+    "channel": "DroneBot Workshop",
+    "query": "IoT wireless gateway beginner explanation"
+   }
+  },
+  "key_points": [
+   "A gateway collects data from nodes and forwards it to the internet or cloud.",
+   "It can translate between protocols, e.g. LoRa → Wi-Fi/Ethernet.",
+   "Place its antenna high and in the open."
+  ],
+  "quiz": [
+   {
+    "question": "A gateway’s job is to…",
+    "answer": "Bridge devices and the network",
+    "options": [
+     "Bridge devices and the network",
+     "Light an LED",
+     "Cool the CPU"
+    ]
+   },
+   {
+    "question": "A LoRa gateway forwards data to…",
+    "answer": "The internet / cloud",
+    "options": [
+     "The internet / cloud",
+     "A speaker",
+     "A battery"
+    ]
+   },
+   {
+    "question": "A “node” is…",
+    "answer": "An end device with sensors",
+    "options": [
+     "An end device with sensors",
+     "A cable",
+     "A power bank"
+    ]
+   },
+   {
+    "question": "Best gateway placement is…",
+    "answer": "High and in the open",
+    "options": [
+     "High and in the open",
+     "Inside a metal box",
+     "Underwater"
+    ]
+   }
+  ],
+  "notes": {
+   "principle": "An IoT gateway connects local devices or sensor networks to another network, often forwarding data to a server or cloud.",
+   "working": "The gateway receives local radio or wired messages, may translate protocols, and forwards validated data over Ethernet, Wi-Fi or cellular links.",
+   "applications": [
+    "Connecting LoRa sensors to cloud dashboards",
+    "Industrial protocol bridging",
+    "Local device aggregation"
+   ],
+   "advantages": [
+    "Connects different network types",
+    "Can filter or process data locally",
+    "Reduces complexity for sensor nodes"
+   ],
+   "disadvantages": [
+    "Can become a single point of failure",
+    "Needs configuration and maintenance",
+    "May introduce latency and security risks"
+   ],
+   "safety": [
+    "Change default passwords and keep firmware updated.",
+    "Place gateways in ventilated, protected locations."
+   ]
+  }
+ },
+ {
+  "id": 23,
+  "title": "Breadboard",
+  "category": "Circuit basics",
+  "icon": "🧩",
+  "summary": "Build temporary circuits without soldering.",
+  "youtube": {
+   "tamil": {
+    "channel": "NexCS Tamil",
+    "query": "breadboard connection Tamil electronics"
+   },
+   "english": {
+    "channel": "Programming Electronics Academy",
+    "query": "breadboard explained for beginners"
+   }
+  },
+  "key_points": [
+   "Holes in each short 5-hole strip are connected together.",
+   "Long power rails along the edges carry 5 V and GND.",
+   "No soldering needed; the centre gap is for chips (ICs)."
+  ],
+  "quiz": [
+   {
+    "question": "Holes in one short 5-hole strip are…",
+    "answer": "Electrically connected",
+    "options": [
+     "Electrically connected",
+     "Separate",
+     "Magnetic"
+    ]
+   },
+   {
+    "question": "Power rails are used for…",
+    "answer": "5 V and GND distribution",
+    "options": [
+     "5 V and GND distribution",
+     "Storing code",
+     "Wi-Fi"
+    ]
+   },
+   {
+    "question": "Is soldering needed on a breadboard?",
+    "answer": "No",
+    "options": [
+     "No",
+     "Yes, always",
+     "Only for LEDs"
+    ]
+   },
+   {
+    "question": "The centre gap is meant for…",
+    "answer": "ICs (chips)",
+    "options": [
+     "ICs (chips)",
+     "Fingers",
+     "Batteries"
+    ]
+   }
+  ],
+  "notes": {
+   "principle": "A breadboard contains connected metal clips under its holes, allowing temporary circuits without soldering.",
+   "working": "Groups of five holes are commonly connected in rows, while long side rails distribute power. The centre gap separates IC pin rows.",
+   "applications": [
+    "Learning circuit connections",
+    "Prototyping sensor circuits",
+    "Testing ideas before soldering"
+   ],
+   "advantages": [
+    "Reusable and solderless",
+    "Fast to change circuits",
+    "Good for classroom experiments"
+   ],
+   "disadvantages": [
+    "Loose contacts can cause faults",
+    "Not suitable for high current or high frequency",
+    "Large circuits become messy"
+   ],
+   "safety": [
+    "Disconnect power before moving wires.",
+    "Avoid mains voltage and high-current loads."
+   ]
+  }
+ },
+ {
+  "id": 24,
+  "title": "Jumper Wires",
+  "category": "Circuit basics",
+  "icon": "🪢",
+  "summary": "Connect points in a prototype circuit.",
+  "youtube": {
+   "tamil": {
+    "channel": "NexCS Tamil",
+    "query": "jumper wires breadboard Tamil"
+   },
+   "english": {
+    "channel": "Programming Electronics Academy",
+    "query": "jumper wires breadboard basics"
+   }
+  },
+  "key_points": [
+   "Use red for power, black for GND, other colours for signals.",
+   "Press wires in firmly – loose wires cause random behaviour.",
+   "Always disconnect power before changing wiring."
+  ],
+  "quiz": [
+   {
+    "question": "Common wire colour for GND is…",
+    "answer": "Black",
+    "options": [
+     "Black",
+     "Red",
+     "Yellow"
+    ]
+   },
+   {
+    "question": "Common wire colour for 5 V is…",
+    "answer": "Red",
+    "options": [
+     "Red",
+     "Black",
+     "Green"
+    ]
+   },
+   {
+    "question": "Before changing wiring you should…",
+    "answer": "Disconnect power",
+    "options": [
+     "Disconnect power",
+     "Hold the wires",
+     "Do nothing"
+    ]
+   },
+   {
+    "question": "A loose jumper wire causes…",
+    "answer": "Unstable or random behaviour",
+    "options": [
+     "Unstable or random behaviour",
+     "Faster code",
+     "Nothing"
+    ]
+   }
+  ],
+  "notes": {
+   "principle": "Jumper wires are insulated conductors that electrically connect points between boards and components.",
+   "working": "Male/female connector ends fit into breadboards, headers or module sockets. Each wire creates a conductive path between its endpoints.",
+   "applications": [
+    "Connecting sensors to controllers",
+    "Breadboard prototyping",
+    "Temporary circuit debugging"
+   ],
+   "advantages": [
+    "Quick and reusable connections",
+    "Different lengths and connector styles",
+    "No soldering for prototypes"
+   ],
+   "disadvantages": [
+    "Can disconnect accidentally",
+    "Wire resistance and quality vary",
+    "Messy wiring makes faults harder to find"
+   ],
+   "safety": [
+    "Use correct wire insulation and connector type.",
+    "Disconnect power before rewiring."
+   ]
+  }
+ },
+ {
+  "id": 25,
+  "title": "USB Cable",
+  "category": "Power & data",
+  "icon": "🔗",
+  "summary": "Power and program a compatible board.",
+  "youtube": {
+   "tamil": {
+    "channel": "Lost Tech Tamil",
+    "query": "Arduino USB cable setup Tamil"
+   },
+   "english": {
+    "channel": "Paul McWhorter",
+    "query": "Arduino connect USB upload first sketch"
+   }
+  },
+  "key_points": [
+   "Arduino Uno uses a USB Type-B cable for power and uploading.",
+   "Some cables are charge-only and cannot upload code.",
+   "In the IDE choose the correct Board and Port first."
+  ],
+  "quiz": [
+   {
+    "question": "A USB cable gives the Arduino…",
+    "answer": "Power and data",
+    "options": [
+     "Power and data",
+     "Only pictures",
+     "Wi-Fi"
+    ]
+   },
+   {
+    "question": "A charge-only cable…",
+    "answer": "Cannot upload code",
+    "options": [
+     "Cannot upload code",
+     "Works faster",
+     "Is best for uploads"
+    ]
+   },
+   {
+    "question": "Before uploading, select…",
+    "answer": "Board and Port",
+    "options": [
+     "Board and Port",
+     "Wallpaper",
+     "Language only"
+    ]
+   },
+   {
+    "question": "Arduino Uno’s USB connector is…",
+    "answer": "Type-B",
+    "options": [
+     "Type-B",
+     "HDMI",
+     "VGA"
+    ]
+   }
+  ],
+  "notes": {
+   "principle": "A USB cable carries power and digital data between a computer and a compatible development board.",
+   "working": "The computer enumerates the board through USB. A data-capable cable allows firmware upload and serial communication; charge-only cables do not.",
+   "applications": [
+    "Uploading Arduino sketches",
+    "Serial monitor debugging",
+    "Powering low-current development boards"
+   ],
+   "advantages": [
+    "Convenient power and programming link",
+    "Common connector standard",
+    "Supports serial debugging"
+   ],
+   "disadvantages": [
+    "Cable quality varies",
+    "Charge-only cables cannot transfer data",
+    "USB power may be insufficient for motors or radios"
+   ],
+   "safety": [
+    "Use a known-good data cable.",
+    "Do not power high-current loads from a computer USB port."
+   ]
+  }
+ },
+ {
+  "id": 26,
+  "title": "Regulated Power Supply",
+  "category": "Power & safety",
+  "icon": "🔋",
+  "summary": "Provide a suitable stable voltage.",
+  "youtube": {
+   "tamil": {
+    "channel": "Sathish Deva",
+    "query": "regulated power supply electronics Tamil"
+   },
+   "english": {
+    "channel": "GreatScott!",
+    "query": "regulated power supply electronics basics"
+   }
+  },
+  "key_points": [
+   "A regulated supply keeps output voltage steady.",
+   "Uno’s external input is recommended at 7–12 V.",
+   "Check polarity; share a common GND if modules use another supply."
+  ],
+  "quiz": [
+   {
+    "question": "A regulated supply gives…",
+    "answer": "Stable output voltage",
+    "options": [
+     "Stable output voltage",
+     "Random voltage",
+     "Only AC"
+    ]
+   },
+   {
+    "question": "Recommended external input for Uno is…",
+    "answer": "7 – 12 V",
+    "options": [
+     "7 – 12 V",
+     "24 – 48 V",
+     "0.5 V"
+    ]
+   },
+   {
+    "question": "Wrong polarity may…",
+    "answer": "Damage parts",
+    "options": [
+     "Damage parts",
+     "Speed up the code",
+     "Do nothing"
+    ]
+   },
+   {
+    "question": "Two separate supplies in one circuit need…",
+    "answer": "A common GND",
+    "options": [
+     "A common GND",
+     "A common SIM",
+     "Nothing"
+    ]
+   }
+  ],
+  "notes": {
+   "principle": "A regulated power supply maintains a stable output voltage despite changes in input voltage or load current within its rating.",
+   "working": "A regulator uses feedback to adjust its output. Linear and switching supplies regulate in different ways and have different efficiency and heat characteristics.",
+   "applications": [
+    "Powering microcontrollers and sensors",
+    "Stable lab bench experiments",
+    "Supplying external motors or modules with correct ratings"
+   ],
+   "advantages": [
+    "Protects circuits from voltage variation",
+    "Provides predictable operation",
+    "Available in many voltage/current ratings"
+   ],
+   "disadvantages": [
+    "Limited by rated current and thermal capacity",
+    "Poor quality supplies can introduce noise",
+    "Wrong polarity or voltage can damage parts"
+   ],
+   "safety": [
+    "Verify voltage, polarity and current rating before connecting.",
+    "Use a current-limited supply during first tests."
+   ]
+  }
+ },
+ {
+  "id": 27,
+  "title": "Low-voltage Demo Load",
+  "category": "Output",
+  "icon": "💡",
+  "summary": "Demonstrate controlled output safely.",
+  "youtube": {
+   "tamil": {
+    "channel": "Sathish Deva",
+    "query": "Arduino low voltage load relay Tamil"
+   },
+   "english": {
+    "channel": "GreatScott!",
+    "query": "Arduino control low voltage DC load safely"
+   }
+  },
+  "key_points": [
+   "Use small 5–12 V DC loads (lamp, fan, LED strip) for demos.",
+   "An Arduino pin gives only about 20 mA – use a relay or transistor for bigger loads.",
+   "Never use mains (230 V) on a student breadboard."
+  ],
+  "quiz": [
+   {
+    "question": "A safe student demo load is…",
+    "answer": "A 5–12 V DC lamp",
+    "options": [
+     "A 5–12 V DC lamp",
+     "A mains heater",
+     "A wall-socket fan"
+    ]
+   },
+   {
+    "question": "Can an Arduino pin drive a big motor directly?",
+    "answer": "No – use a relay or driver",
+    "options": [
+     "No – use a relay or driver",
+     "Yes",
+     "Only on Sundays"
+    ]
+   },
+   {
+    "question": "Safe current from an Uno I/O pin is about…",
+    "answer": "20 mA",
+    "options": [
+     "20 mA",
+     "5 A",
+     "100 A"
+    ]
+   },
+   {
+    "question": "Mains (230 V) circuits are…",
+    "answer": "Not for student breadboard demos",
+    "options": [
+     "Not for student breadboard demos",
+     "Best for beginners",
+     "Safe to touch"
+    ]
+   }
+  ],
+  "notes": {
+   "principle": "A demo load is an output device used to show that a controller can switch or regulate a real electrical load.",
+   "working": "The microcontroller drives a suitable transistor, MOSFET or relay driver. The driver switches the load current while the controller supplies only a control signal.",
+   "applications": [
+    "Low-voltage lamp switching",
+    "Small DC fan demonstrations",
+    "Showing automated control actions"
+   ],
+   "advantages": [
+    "Makes project behaviour visible",
+    "Connects code to real-world outputs",
+    "Can demonstrate driver circuits"
+   ],
+   "disadvantages": [
+    "Needs a correctly rated driver",
+    "Loads can draw more current than expected",
+    "Inductive loads create voltage spikes"
+   ],
+   "safety": [
+    "Use a small, low-voltage DC load only in student demos.",
+    "Never connect a mains appliance to a breadboard."
+   ]
+  }
+ },
+ {
+  "id": 28,
+  "title": "Antenna",
+  "category": "Wireless",
+  "icon": "📻",
+  "summary": "Help a radio module transmit and receive.",
+  "youtube": {
+   "tamil": {
+    "channel": "Lost Tech Tamil",
+    "query": "IoT antenna basics Tamil"
+   },
+   "english": {
+    "channel": "DroneBot Workshop",
+    "query": "antenna basics wireless communication beginner"
+   }
+  },
+  "key_points": [
+   "An antenna sends and receives radio waves.",
+   "It must match the module’s frequency (433 MHz, 865 MHz, 2.4 GHz).",
+   "Never transmit without the antenna attached."
+  ],
+  "quiz": [
+   {
+    "question": "An antenna…",
+    "answer": "Radiates and receives radio waves",
+    "options": [
+     "Radiates and receives radio waves",
+     "Stores data",
+     "Cools chips"
+    ]
+   },
+   {
+    "question": "Choose an antenna that matches the…",
+    "answer": "Module frequency",
+    "options": [
+     "Module frequency",
+     "Colour",
+     "Arduino size"
+    ]
+   },
+   {
+    "question": "Transmitting without an antenna may…",
+    "answer": "Damage the module",
+    "options": [
+     "Damage the module",
+     "Make it faster",
+     "Do nothing"
+    ]
+   },
+   {
+    "question": "Best antenna placement is…",
+    "answer": "Clear, open and upright",
+    "options": [
+     "Clear, open and upright",
+     "Inside a metal box",
+     "Underwater"
+    ]
+   }
+  ],
+  "notes": {
+   "principle": "An antenna converts electrical radio-frequency energy into electromagnetic waves for transmission and reception.",
+   "working": "The antenna geometry is designed for a frequency band. It radiates transmitted RF energy and captures incoming radio signals.",
+   "applications": [
+    "Wi-Fi and Bluetooth links",
+    "LoRa and XBee communication",
+    "Wireless sensor networks"
+   ],
+   "advantages": [
+    "Enables wireless communication",
+    "Different designs suit different ranges and devices",
+    "Can improve link quality when matched correctly"
+   ],
+   "disadvantages": [
+    "Performance depends on frequency and placement",
+    "Nearby metal and obstacles affect signals",
+    "Incorrect matching reduces efficiency"
+   ],
+   "safety": [
+    "Use an antenna matched to the radio module and band.",
+    "Follow radio power and frequency regulations."
+   ]
+  }
+ },
+ {
+  "id": 29,
+  "title": "Voltage Divider / Level Shifter",
+  "category": "Circuit basics",
+  "icon": "↘️",
+  "summary": "Adapt signal voltage between devices.",
+  "youtube": {
+   "tamil": {
+    "channel": "Sathish Deva",
+    "query": "voltage divider level shifter Tamil"
+   },
+   "english": {
+    "channel": "GreatScott!",
+    "query": "voltage divider logic level shifter tutorial"
+   }
+  },
+  "key_points": [
+   "Voltage divider: Vout = Vin × R2 ÷ (R1 + R2).",
+   "A 1 kΩ (top) and 2 kΩ (bottom) divider turns 5 V into about 3.3 V.",
+   "A level shifter does this safely in both directions."
+  ],
+  "quiz": [
+   {
+    "question": "The voltage divider formula is…",
+    "answer": "Vout = Vin × R2 ÷ (R1+R2)",
+    "options": [
+     "Vout = Vin × R2 ÷ (R1+R2)",
+     "Vout = Vin × R1 × R2",
+     "Vout = Vin + R1 + R2"
+    ]
+   },
+   {
+    "question": "Which pair gives about 3.3 V from 5 V (R1 top, R2 bottom)?",
+    "answer": "R1 = 1 kΩ, R2 = 2 kΩ",
+    "options": [
+     "R1 = 1 kΩ, R2 = 2 kΩ",
+     "R1 = 2 kΩ, R2 = 1 kΩ",
+     "R1 = R2"
+    ]
+   },
+   {
+    "question": "Why shift levels?",
+    "answer": "To protect 3.3 V pins from 5 V",
+    "options": [
+     "To protect 3.3 V pins from 5 V",
+     "To make LEDs flash",
+     "To play sound"
+    ]
+   },
+   {
+    "question": "ESP8266 inputs tolerate…",
+    "answer": "3.3 V",
+    "options": [
+     "3.3 V",
+     "5 V",
+     "12 V"
+    ]
+   }
+  ],
+  "notes": {
+   "principle": "A voltage divider uses two resistors to produce a lower voltage; a logic-level shifter safely translates digital signals between voltage domains.",
+   "working": "For a divider, Vout = Vin × R2 ÷ (R1 + R2). A bidirectional level-shifter module uses switching circuitry for signals travelling in both directions.",
+   "applications": [
+    "Adapting 5 V signals for 3.3 V inputs",
+    "Reading battery voltage",
+    "Interfacing different logic families"
+   ],
+   "advantages": [
+    "Simple low-cost voltage scaling",
+    "Protects sensitive inputs when designed correctly",
+    "Level-shifter modules support multiple signal directions"
+   ],
+   "disadvantages": [
+    "A resistor divider is not suitable for every fast or bidirectional signal",
+    "Output depends on resistor tolerance and load",
+    "Incorrect values can still damage inputs"
+   ],
+   "safety": [
+    "Calculate the output voltage before connecting.",
+    "Never assume a 3.3 V input is 5 V tolerant."
+   ]
+  }
+ },
+ {
+  "id": 30,
+  "title": "Smartphone Bluetooth App",
+  "category": "Mobile IoT",
+  "icon": "📱",
+  "summary": "Control or monitor a project from a phone.",
+  "youtube": {
+   "tamil": {
+    "channel": "Lost Tech Tamil",
+    "query": "Arduino Bluetooth mobile app Tamil"
+   },
+   "english": {
+    "channel": "DroneBot Workshop",
+    "query": "control Arduino with phone Bluetooth app"
+   }
+  },
+  "key_points": [
+   "Pair the phone with HC-05/HC-06 first.",
+   "The app sends characters (like ‘A’ or ‘1’) over Bluetooth serial.",
+   "The Arduino reads the character and switches an LED, relay or servo."
+  ],
+  "quiz": [
+   {
+    "question": "A Bluetooth app usually sends…",
+    "answer": "Text / character commands",
+    "options": [
+     "Text / character commands",
+     "Only images",
+     "Mains power"
+    ]
+   },
+   {
+    "question": "First step with the app is to…",
+    "answer": "Pair the phone with the module",
+    "options": [
+     "Pair the phone with the module",
+     "Format the phone",
+     "Remove the antenna"
+    ]
+   },
+   {
+    "question": "The Arduino reads an incoming character with…",
+    "answer": "Serial.read()",
+    "options": [
+     "Serial.read()",
+     "digitalWrite()",
+     "tone()"
+    ]
+   },
+   {
+    "question": "The phone app and module must use the same…",
+    "answer": "Baud rate (e.g. 9600)",
+    "options": [
+     "Baud rate (e.g. 9600)",
+     "Wallpaper",
+     "Colour"
+    ]
+   }
+  ],
+  "notes": {
+   "principle": "A smartphone Bluetooth app provides a user interface that sends wireless commands to a paired Bluetooth module.",
+   "working": "The app sends characters or data packets over a Bluetooth serial connection. The controller reads the received data and maps commands to safe output actions.",
+   "applications": [
+    "Phone-controlled LEDs and robots",
+    "Remote sensor dashboards",
+    "Classroom automation demonstrations"
+   ],
+   "advantages": [
+    "Familiar and accessible user interface",
+    "No separate physical control panel needed",
+    "Great for demonstrating wireless control"
+   ],
+   "disadvantages": [
+    "Phone operating-system permissions vary",
+    "Pairing and connection can fail",
+    "Range is limited and security must be considered"
+   ],
+   "safety": [
+    "Pair only with your own project module.",
+    "Use command validation and never control hazardous loads from an unsecured app."
+   ]
+  }
+ }
+]
